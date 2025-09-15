@@ -1,0 +1,18 @@
+{
+  "name": "user-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "user",
+    "database.password": "pass",
+    "database.dbname": "userdb",
+    "database.server.name": "userdbserver",
+    "plugin.name": "pgoutput",
+    "table.include.list": "public.users",
+    "slot.name": "debezium_slot",
+    "publication.name": "dbz_publication",
+    "tasks.max": "1",
+    "snapshot.mode": "initial"
+  }
+}
